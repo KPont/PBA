@@ -5,6 +5,8 @@
  */
 package test1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Kasper
@@ -15,13 +17,13 @@ public class Test1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println(test1(6, 5, 4));
+        JOptionPane.showMessageDialog(null, test1(Integer.parseInt(JOptionPane.showInputDialog("Enter first (x) value")), Integer.parseInt(JOptionPane.showInputDialog("Enter second (y) value")), Integer.parseInt(JOptionPane.showInputDialog("Enter third (z) value"))));
     }
     
     public static String test1(int x, int y, int z){
         String result;
 
-        if(x == y && y == z && x == z){
+        if(x == y && y == z){
             result = "equilateral";
         }
         else if(x == y || x == z || y == z){
